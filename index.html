@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+        
+        main {
+            margin-top: 3rem;
+        }
+        
+        .lead {
+            text-align: justify;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .post-title {
+                margin-top: 1rem;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .read-more {
+                text-align: center;
+            }
+        }
+        
+        .extra-margin {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+          
+        .navbar {
+            background-color: #00d0ff;
+        }
+        
+        footer.page-footer {
+            background-color: #555658;
+            margin-top: 2rem;
+        }
+		
+		@media only screen and (max-device-width: 480px) { 
+			.col-lg-5 {
+			margin-top: 25%;
+			}
+		}
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <!--Navbar-->
+          
+        <nav class="navbar navbar-toggleable-md navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <strong>DebilStudios</strong>
+                </a>
+                
+            </div>
+        </nav>
+        <!--/.Navbar-->
+    </header>
+
+    <main>
+        <!--Main layout-->
+        <div class="container">
+
+            <!--Page heading-->
+            <div class="row wow fadeIn" data-wow-delay="0.2s">
+                <div class="col-md-12">
+                    <h1 class="h1-responsive">DebilStudios
+                        <small class="text-muted"></small>
+                    </h1>
+                </div>
+            </div>
+            <!--/.Page heading-->
+            <hr>
+			<div id="content"></div>
+			  <script id="entry-template" type="text/x-handlebars-template" data-spreadsheet-url="https://docs.google.com/spreadsheets/d/18O_kCaT3vzIQvZuXM9rQVX7QmZAlsFrPlkJa7NcMwlc/pubhtml">
+    <!-- All your HTML goes between these script tags -->
+
+		{{#each videos}}
+            <!--First row-->
+            <div class="row wow fadeIn" data-wow-delay="0.2s" style="margin-bottom: 20%;">
+                <!--Featured image-->
+                <div class="col-lg-7">
+				<iframe frameborder="0" width="100%" height="100%" src="{{url}}" allowfullscreen="" style="padding-right: 20%; min-height: 176%;min-width: 110%; "></iframe>
+				
+                </div>
+                <!--/.Featured image-->
+
+                <!--Post excerpt-->
+                <div class="col-lg-5">
+                    <a href="#!"><h2 class="post-title">{{title}}</h2></a>
+                    <p class="lead">{{desc}}</p>
+                    <div class="read-more">
+                        <a href="{{href}}" class="btn btn-primary">{{href-text}}</a>
+                    </div>
+                </div>
+                <!--/.Post excerpt-->
+            </div>
+            <!--/.First row-->
+            <hr class="extra-margin"></hr>
+		{{/each}}
+
+    <!-- Stop your HTML now -->
+  </script>
+
+            
+        </div>
+        <!--/.Main layout-->
+    </main>
+
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only">
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="containter-fluid">
+                © 2017 Copyright DebilStudios </a>
+            </div>
+        </div>
+        <!--/.Copyright-->
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>	<script src="js/cmsish.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		var myCms = new cmsish.init('https://docs.google.com/spreadsheets/d/18O_kCaT3vzIQvZuXM9rQVX7QmZAlsFrPlkJa7NcMwlc/pubhtml');
+	</script>
+
+
+    <script>
+    new WOW().init();
+    </script>
+    
+</body>
+
+</html>
